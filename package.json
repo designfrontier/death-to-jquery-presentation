@@ -1,18 +1,17 @@
 {
-  "name": "reveal.js",
-  "version": "3.4.0",
-  "description": "The HTML Presentation Framework",
-  "homepage": "http://lab.hakim.se/reveal-js",
-  "subdomain": "revealjs",
+  "name": "death-to-jquery",
+  "version": "1.0.0",
+  "description": "An end to the jquery chaos",
+  "homepage": "http://designfrontier.net",
   "main": "js/reveal.js",
   "scripts": {
     "test": "grunt test",
     "start": "grunt serve"
   },
   "author": {
-    "name": "Hakim El Hattab",
-    "email": "hakim.elhattab@gmail.com",
-    "web": "http://hakim.se"
+    "name": "Daniel Sellers",
+    "email": "daniel@designfrontier.net",
+    "web": "http://designfrontier.net"
   },
   "repository": {
     "type": "git",
