@@ -57,6 +57,7 @@ body {
   line-height: 1.2;
   letter-spacing: normal;
   text-transform: uppercase;
+  text-align: left;
   text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
   word-wrap: break-word; }
 
