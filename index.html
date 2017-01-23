@@ -85,14 +85,15 @@
 
             const randomColor = () => '#'+(Math.random()*0xFFFFFF<<0).toString(16);
 
-            const generateBackground = () => {
+            const generateBackground = (seed) => {
                 var pattern = Trianglify({
                     height: document.body.clientHeight,
                     width: document.body.clientWidth,
                     cell_size: randomInt(150),
                     variance: '0.' + randomInt(100),
                     x_colors: 'random',
-                    y_colors: 'random'
+                    y_colors: 'random',
+                    seed: seed
                 });
 
                 [].slice.call(document.getElementById('background').getElementsByTagName('svg')).forEach((svg) => svg.remove());
@@ -116,10 +117,12 @@
             });
 
             Reveal.addEventListener( 'slidechanged', function( event ) {
-                generateBackground();
+                generateBackground(document.querySelector('.present h2').textContent);
+            } );
+            Reveal.addEventListener( 'ready', function( event ) {
+                generateBackground(document.querySelector('.present h2').textContent);
             } );
 
-            generateBackground();
         </script>
     </body>
 </html>
