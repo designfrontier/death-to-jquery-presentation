@@ -6,13 +6,13 @@
  * Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
  */
 @import url(../../lib/font/league-spartan/league-spartan.css);
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville');
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
 
 .reveal {
-  font-family: helvetica, sans-serif;
+  font-family: 'Libre Baskerville', serif;
   font-size: 30px;
   font-weight: normal;
   color: #eee; }
@@ -47,6 +47,7 @@
   font-weight: normal;
   line-height: 1.2;
   letter-spacing: normal;
+  text-transform: uppercase;
   text-align: left;
   font-weight: normal;
   text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
@@ -58,11 +59,18 @@
 .reveal h2 {
   font-size: 2.11em; }
 
+.reveal h3, .reveal h4 {
+  text-transform: none;
+  font-family: 'Libre Baskerville', serif;
+}
+
 .reveal h3 {
-  font-size: 1.55em; }
+  font-size: 1.55em;
+}
 
 .reveal h4 {
-  font-size: 1em; }
+  font-size: 1em;
+}
 
 /*********************************************
  * OTHER
