@@ -44,6 +44,9 @@
                 left: 0;
                 bottom: 0;
             }
+            section {
+                text-align: left;
+            }
         </style>
     </head>
     <body>
@@ -54,7 +57,7 @@
             <div class="reveal">
                 <div class="slides">
                     <section>
-                        <h2>Death to jQuery</h2>
+                        <h1 class="first-slide-title">Death to jQuery</h1>
                     </section>
                     <section>
                         <h2>Before we get to the killing part...</h2>
@@ -65,10 +68,57 @@
                         <h3>there was &lt;html&gt;</h3>
                     </section>
                     <section>
-                        <h2>The rise of styles and scripts</h2>
+                        <h2>The rise of styles and scripts: DHTML</h2>
                     </section>
                     <section>
                         <h2>AJAX</h2>
+                    </section>
+                    <section>
+                        <h2>Web Applications</h2>
+                    </section>
+                    <section>
+                        <h2>Frameworks and more!</h2>
+                    </section>
+                    <section>
+                        <h2>So... jQuery <strike>is</strike>was amazing</h2>
+                    </section>
+                    <section>
+                        <h2>So... jQuery <strike>is</strike>was amazing</h2>
+                        <ul>
+                            <li>Made ajax simple cross browser</li>
+                            <li>Made DOM manip easy cross browser</li>
+                            <li>Made js easy cross browser</li>
+                            <li>Made dynamic applications approachable</li>
+                            <li>Web standards were not a thing (designing with web standards 2003, jquery 2006)</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Web Standards won!</h2>
+                        <h3>... well mostly</h3>
+                    </section>
+                    <section>
+                        <h2>What did we use jQuery for anyway?</h2>
+                    </section>
+                    <section>
+                        <h2>What did we use jQuery for anyway?</h2>
+                        <ul>
+                            <li>Animation</li>
+                            <li>AJAX</li>
+                            <li>DOM Modification</li>
+                            <li>DOM Selection</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>DOM Selection</h2>
+                    </section>
+                    <section>
+                        <h2>DOM Modification</h2>
+                    </section>
+                    <section>
+                        <h2>Native AJAX</h2>
+                    </section>
+                    <section>
+                        <h2>Animations...</h2>
                     </section>
                 </div>
             </div>
@@ -105,7 +155,7 @@
             Reveal.initialize({
                 history: true,
                 progress: false,
-                // controls: false,
+                controls: false,
 
                 // More info https://github.com/hakimel/reveal.js#dependencies
                 dependencies: [
@@ -119,10 +169,10 @@
             Reveal.addEventListener( 'slidechanged', function( event ) {
                 generateBackground(document.querySelector('.present h2').textContent);
             } );
-            Reveal.addEventListener( 'ready', function( event ) {
-                generateBackground(document.querySelector('.present h2').textContent);
-            } );
 
+            Reveal.addEventListener( 'ready', function( event ) {
+                generateBackground(document.querySelector('.present h1').textContent);
+            } );
         </script>
     </body>
 </html>
