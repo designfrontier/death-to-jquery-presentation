@@ -7,7 +7,7 @@
         <title>reveal.js</title>
 
         <link rel="stylesheet" href="css/reveal.css">
-        <link rel="stylesheet" href="css/theme/league.css">
+        <link rel="stylesheet" href="css/theme/league-spartan.css">
 
         <!-- Theme used for syntax highlighting of code -->
         <link rel="stylesheet" href="lib/css/zenburn.css">
@@ -166,13 +166,17 @@
                 ]
             });
 
-            Reveal.addEventListener( 'slidechanged', function( event ) {
-                generateBackground(document.querySelector('.present h2').textContent);
-            } );
+            const backgroundListener = (event) => {
+                const seedElem = document.querySelector('.present h2') ||
+                                document.querySelector('.present h1');
 
-            Reveal.addEventListener( 'ready', function( event ) {
-                generateBackground(document.querySelector('.present h1').textContent);
-            } );
+                debugger;
+
+                generateBackground(seedElem.textContent);
+            };
+
+            Reveal.addEventListener( 'slidechanged', backgroundListener);
+            Reveal.addEventListener( 'ready', backgroundListener);
         </script>
     </body>
 </html>
