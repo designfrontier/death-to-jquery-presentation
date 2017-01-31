@@ -60,6 +60,10 @@
                         <h1 class="first-slide-title">Death to jQuery</h1>
                     </section>
                     <section>
+                        <h2> Hi! I'm Daniel</h2>
+                        <h3>Engineer on Bridge</h3>
+                    </section>
+                    <section>
                         <h2>Before we get to the killing part...</h2>
                         <h3>Let's talk about where we've been</h3>
                     </section>
@@ -67,11 +71,28 @@
                         <h2>In the beginning...</h2>
                         <h3>there was &lt;html&gt;</h3>
                     </section>
+                    <section data-background-image="lib/img/First_Web_Server.jpg">
+                        <p class="attribution">By <a href="https://en.wikipedia.org/wiki/User:Coolcaesar" class="extiw" title="en:User:Coolcaesar">Coolcaesar</a> at the <a href="https://en.wikipedia.org/wiki/" class="extiw" title="w:">English language Wikipedia</a>, <a href="http://creativecommons.org/licenses/by-sa/3.0/" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=395096">Link</a></p>
+                    </section>
                     <section>
                         <h2>The rise of styles and scripts: DHTML</h2>
+                        <aside class="notes">
+                            Still server request/response bound
+                        </aside>
                     </section>
                     <section>
                         <h2>AJAX</h2>
+                        <aside class="notes">
+                            1998 - Microsoft makes first XMLHttp request in Outlook web app?
+                            1999 - XMLHttp shipped in IE 5
+                            XMLHttp implemented by everyone else as XMLHttpRequest
+                            2005 - Jesse James Garret coins the term AJAX
+                            2006 - First draft release of the Spec for XHR
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>2006.</h2>
+                        <h3>Let that sink in for a minute.</h3>
                     </section>
                     <section>
                         <h2>Web Applications</h2>
@@ -80,45 +101,319 @@
                         <h2>Frameworks and more!</h2>
                     </section>
                     <section>
-                        <h2>So... jQuery <strike>is</strike>was amazing</h2>
-                    </section>
-                    <section>
-                        <h2>So... jQuery <strike>is</strike>was amazing</h2>
-                        <ul>
-                            <li>Made ajax simple cross browser</li>
-                            <li>Made DOM manip easy cross browser</li>
-                            <li>Made js easy cross browser</li>
-                            <li>Made dynamic applications approachable</li>
-                            <li>Web standards were not a thing (designing with web standards 2003, jquery 2006)</li>
-                        </ul>
+                        <h2 class="force-top">So... jQuery <strike>is</strike> was amazing</h2>
+                        <section>
+                            <aside class="notes">
+                                August 26, 2006 - first release
+                            </aside>
+                        </section>
+                        <section>
+                            <ul>
+                                <li>Made AJAX simple cross browser</li>
+                            </ul>
+                        </section>
+                        <section>
+                            <ul>
+                                <li class="secondary-item">Made AJAX simple cross browser</li>
+                                <li>Made js and DOM easy cross browser</li>
+                            </ul>
+                            <aside class="notes">
+                                <ul>
+                                    <li>document.querySelectorAll didn't land in IE until 8</li>
+                                </ul>
+                            </aside>
+                        </section>
+                        <section>
+                            <ul>
+                                <li class="secondary-item">Made AJAX simple cross browser</li>
+                                <li class="secondary-item">Made js and DOM easy cross browser</li>
+                                <li>Made dynamic applications approachable</li>
+                            </ul>
+                        </section>
+                        <section>
+                            <ul>
+                                <li class="secondary-item">Made AJAX simple cross browser</li>
+                                <li class="secondary-item">Made js and DOM easy cross browser</li>
+                                <li class="secondary-item">Made dynamic applications approachable</li>
+                                <li>Web standards were not a thing</li>
+                            </ul>
+                            <aside class="notes">
+                                <ul>
+                                    <li>(designing with web standards 2003, jquery 2006).</li>
+                                </ul>
+                            </aside>
+                        </section>
                     </section>
                     <section>
                         <h2>Web Standards won!</h2>
                         <h3>... well mostly</h3>
+                        <aside class="notes">
+                            <ul>
+                                <li>XMLHttpRequest in all browsers post IE 7 October (>2006)</li>
+                                <li>document.querySelectorAll didn't land in IE until 8 (2009)</li>
+                            </ul>
+                        </aside>
                     </section>
                     <section>
                         <h2>What did we use jQuery for anyway?</h2>
+                        <section>
+                            <aside class="notes">
+                                August 26, 2006 - first release
+                            </aside>
+                        </section>
+                        <section>
+                            <ul>
+                                <li>Animation</li>
+                            </ul>
+                        </section>
+                        <section>
+                            <ul>
+                                <li class="secondary-item">Animation</li>
+                                <li>AJAX</li>
+                            </ul>
+                        </section>
+                        <section>
+                            <ul>
+                                <li class="secondary-item">Animation</li>
+                                <li class="secondary-item">AJAX</li>
+                                <li>Working with the DOM</li>
+                            </ul>
+                        </section>
                     </section>
                     <section>
-                        <h2>What did we use jQuery for anyway?</h2>
-                        <ul>
-                            <li>Animation</li>
-                            <li>AJAX</li>
-                            <li>DOM Modification</li>
-                            <li>DOM Selection</li>
-                        </ul>
-                    </section>
-                    <section>
-                        <h2>DOM Selection</h2>
-                    </section>
-                    <section>
-                        <h2>DOM Modification</h2>
+                        <h2>Working With the DOM</h2>
+                        <section></section>
+                        <section>
+                            <pre><code data-trim>
+                                var elem = $('#myElementId');
+                                // becomes
+                                var elem = document.getElementByID('myElementId');
+                            </code></pre>
+                        </section>
+                        <section>
+                            <pre><code data-trim>
+                                var elem = $('.my-class');
+                                // becomes
+                                var elem = document.querySelectorAll('.my-class');
+                                // or
+                                var elem = document.querySelector('.my-class');
+                            </code></pre>
+                        </section>
+                        <section>
+                            <h3>So... what's the difference between</h3>
+                            <pre><code data-trim>
+                                const elem = document.querySelectorAll('.my-class'); //returns array like object
+                                // and
+                                const elem = document.querySelector('.my-class'); //returns DOM node
+                            </code></pre>
+                        </section>
+                        <section>
+                            <pre><code data-trim>
+                                const domQuery = (selector) => {
+                                    const isId = selector.match(/#/);
+                                    const Arr = Array.prototype;
+
+                                    if (isId) {
+                                        return document.querySelector(selector);
+                                    } else {
+                                        return Arr.slice.call(document.querySelectorAll(selector) || []);
+                                    }
+                                };
+                            </code></pre>
+                        </section>
+                        <section>
+                            <h3>What about finding parent nodes?</h3>
+                            <pre><code data-trim>
+                                const elem = domQuery('#myId');
+
+                                elem.parentNode.remove(elem);
+                                // or...
+                                elem.parentElement.remove(elem);
+
+                                //or maybe the next sibling element
+                                sibling = elem.nextSibling;
+                            </code></pre>
+
+                            <aside class="notes">
+                                there are some edge cases where they act differently.
+                                for instance: document.documentElement is null in .parentElement and the document node in .parentNode.
+                            </aside>
+                        </section>
                     </section>
                     <section>
                         <h2>Native AJAX</h2>
+                        <section></section>
+                        <section>
+                            <pre><code data-trim>
+                                $.get('http://instructure.bridgeapp.com/api/users', function (data) {
+                                    // do stuff!
+                                });
+                            </code></pre>
+                        </section>
+                        <section>
+                            <h3>Streams!</h3>
+                            <pre><code data-trim>
+                                const req = new XMLHttpRequest();
+
+                                //register eent listener before we don anything else
+                                req.addEventListener('load', function () {
+                                    const response = JSON.parse(this.responseText);
+
+                                    //Cool! We have the datas.
+                                });
+
+                                // tell the request what to go get
+                                req.open('GET', 'http://instructure.bridgeapp.com/api/users');
+
+                                // tell the request to send
+                                req.send();
+                            </code></pre>
+                        </section>
+                        <section>
+                            <h3>Streams!</h3>
+                            <pre><code data-trim>
+                                const req = new XMLHttpRequest();
+
+                                //register eent listener before we don anything else
+                                req.addEventListener('load', function () {
+                                    const response = JSON.parse(this.responseText);
+
+                                    //Cool! We have the datas.
+                                });
+
+                                // tell the request what to go get
+                                req.open('POST', 'http://instructure.bridgeapp.com/api/users');
+                                req.setRequestHeader('Content-Type', 'application/json');
+
+                                // tell the request to send
+                                req.send(JSON.stringify({
+                                    name: 'Luke Skyjogger',
+                                    role: 'admin'
+                                }));
+                            </code></pre>
+                        </section>
+                        <section>
+                            <h3>Fetch!</h3>
+                            <pre><code data-trim>
+                                fetch('http://instructure.bridgeapp.com/api/users')
+                                    .then((response) => {
+                                        response.json().then((data) => {
+                                            // this is where we do stuff with the data
+                                        });
+                                    });
+
+                                // or
+
+                                fetch('http://instructure.bridgeapp.com/api/users')
+                                    .then((response) => {
+                                        return response.json();
+                                    }).then((data) => {
+                                        // this is where we do stuff with the data
+                                    });
+                            </code></pre>
+                            <aside class="notes">
+                                point out the need for the then on the new json API in fetch
+                            </aside>
+                        </section>
+                        <section>
+                            <h3>Fetch!</h3>
+                            <pre><code data-trim>
+                                fetch('http://instructure.bridgeapp.com/api/users', {
+                                    method: 'POST',
+                                    body: JSON.stringify({
+                                        name: 'Luke Skyjogger',
+                                        role: 'admin'
+                                    })
+                                }).then((response) => {
+                                    return response.json();
+                                }).then((data) => {
+                                    // this is where we do stuff with the data
+                                });
+                            </code></pre>
+                        </section>
                     </section>
                     <section>
                         <h2>Animations...</h2>
+                        <section></section>
+                        <section>
+                            <pre><code data-trim>
+                                $('#myElement').animate({
+                                    height: '200px',
+                                    width: '200px'
+                                });
+
+                                //or
+
+                                $('#myElement').animate({
+                                    height: '200px',
+                                    width: '200px'
+                                }, 400, 'easein', () => {
+                                    #('myElementTwo').animate({
+                                        height: '100px',
+                                        width: '100px'
+                                    }, 400, 'easin');
+                                });
+                            </code></pre>
+                            <aside class="notes">
+                                The first... can probably be a CSS transform/transition. The second... for that you need a framework.
+                            </aside>
+                        </section>
+                        <section>
+                            <h3>Web Animations API</h3>
+                            <pre><code data-trim>
+                                var player = document.getElementById('toAnimate').animate([
+                                    { transform: 'scale(1)', opacity: 1, offset: 0 },
+                                    { transform: 'scale(.5)', opacity: .5, offset: .3 },
+                                    { transform: 'scale(.667)', opacity: .667, offset: .7875 },
+                                    { transform: 'scale(.6)', opacity: .6, offset: 1 }
+                                ], {
+                                    duration: 700, //milliseconds
+                                    easing: 'ease-in-out', //'linear', a bezier curve, etc.
+                                    delay: 10, //milliseconds
+                                    iterations: Infinity, //or a number
+                                    direction: 'alternate', //'normal', 'reverse', etc.
+                                    fill: 'forwards' //'backwards', 'both', 'none', 'auto'
+                                });
+                            </code></pre>
+                            <p>Courtesy of <a href="http://danielcwilson.com/blog/2015/07/animations-part-1/">Daniel C. Wilson</a></p>
+                            <aside class="notes">
+                                Timeline, animation groups, getAnimations, motion paths, and more!
+                            </aside>
+                        </section>
+                        <section>
+                            <h3>Web Animations API</h3>
+                            <pre><code data-trim>
+                                var elem = document.getElementById('toAnimate');
+                                var elem2 = document.getElementById('toAnimate2');
+                                var timings = {
+                                  duration: 1000
+                                }
+                                var keyframes = [
+                                  { opacity: 1 }.
+                                  { opacity: 0 }
+                                ];
+
+                                var kEffects = [
+                                  new KeyframeEffect(elem, keyframes, timings),
+                                  new KeyframeEffect(elem2, keyframes, timings)
+                                ];
+                                var group = new SequenceEffect(kEffects);
+                                document.timeline.play(group);
+                            </code></pre>
+                        </section>
+                        <section>
+                            <h3>Green Sock Animation Platform</h3>
+                        </section>
+                    </section>
+                    <section>
+                        <h2>So... jQuery <strike>is</strike> was amazing</h2>
+                    </section>
+                    <section>
+                        <h2>But now we have better tools</h2>
+                    </section>
+                    <section>
+                        <h2>RIP jQuery</h2>
+                        <h3>2006&mdash;2016</h3>
                     </section>
                 </div>
             </div>
@@ -168,9 +463,14 @@
 
             const backgroundListener = (event) => {
                 const seedElem = document.querySelector('.present h2') ||
-                                document.querySelector('.present h1');
+                                document.querySelector('.present h1') ||
+                                'The world is a cold dark place';
 
-                debugger;
+                if (event.indexv > 0 && document.querySelector('.stack.present h2')) {
+                    document.querySelector('.stack.present h2').style['margin-top'] = "60px";
+                } else if (document.querySelector('.stack.present h2')){
+                    document.querySelector('.stack.present h2').style['margin-top'] = "282px";
+                }
 
                 generateBackground(seedElem.textContent);
             };

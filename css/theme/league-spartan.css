@@ -49,12 +49,11 @@
   letter-spacing: normal;
   text-transform: uppercase;
   text-align: left;
-  font-weight: normal;
   text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
   word-wrap: break-word; }
 
 .reveal h1 {
-  font-size: 3.77em; }
+  font-size: 3.36em; }
 
 .reveal h2 {
   font-size: 2.11em; }
@@ -70,6 +69,15 @@
 
 .reveal h4 {
   font-size: 1em;
+}
+
+.reveal .attribution {
+    font-size: 1rem;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    color: black;
 }
 
 /*********************************************
@@ -98,13 +106,15 @@
 .reveal ul {
   display: inline-block;
   text-align: left;
+  list-style: none;
   margin: 0 0 0 1em; }
+
+.reveal .secondary-item {
+  color: rgba(255,255,255,0.3);
+}
 
 .reveal ol {
   list-style-type: decimal; }
-
-.reveal ul {
-  list-style-type: disc; }
 
 .reveal ul ul {
   list-style-type: square; }
@@ -150,7 +160,7 @@
   display: block;
   position: relative;
   width: 90%;
-  margin: 20px auto;
+  margin: 0;
   text-align: left;
   font-size: 0.55em;
   font-family: monospace;
